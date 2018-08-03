@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+from django.forms.models import model_to_dict
 # Create your models here.
 
 
@@ -15,5 +16,8 @@ class AppDetails(models.Model):
     app_desc = models.CharField(max_length=200)
 
     # App serach string
-    search_str = models.CharField(max_length=200)
+    search_str = models.TextField()
+
+    def ayopop_model_to_dict(self):
+        return model_to_dict(self)
 

@@ -16,7 +16,7 @@ def get_play_store_data(search_str):
     app_list = []
 
     for app_div in app_list_dom:
-        print app_div
+        # print app_div
         obj = {}
         app_relative_url = app_div.find_all(class_="card-click-target")[0]['href']
         abs_url = urlparse.urljoin(base_url, app_relative_url)
